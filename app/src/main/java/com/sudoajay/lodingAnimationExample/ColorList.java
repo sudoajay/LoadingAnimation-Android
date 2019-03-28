@@ -1,4 +1,4 @@
-package com.sudoajay.mymodule;
+package com.sudoajay.lodingAnimationExample;
 
 import android.graphics.Color;
 

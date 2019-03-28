@@ -8,15 +8,6 @@
     android:background="#FFFFFF"
     android:orientation="vertical">
 
-    <com.sudoajay.mymodule.DrawLoadingAnimation
-        android:id="@+id/signature_canvas"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        custom:layout_constraintEnd_toEndOf="parent"
-        custom:layout_constraintHorizontal_bias="0.5"
-        custom:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/button1"
