@@ -8,17 +8,28 @@
     android:background="#FFFFFF"
     android:orientation="vertical">
 
+    <com.sudoajay.lodinganimation.LoadingAnimation
+        android:id="@+id/loadingAnimation"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/layout_Margin_Bottom"
+        app:layout_constraintBottom_toTopOf="@+id/btnChangeColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/btnChangeColor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|center"
+        android:layout_marginBottom="@dimen/layout_Margin_Bottom"
         android:onClick="clearCanvas"
         android:text="@string/change_Color"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

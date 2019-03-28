@@ -11,7 +11,7 @@ import android.util.AttributeSet;
 import android.view.View;
 
 
-public class DrawLoadingAnimation extends View {
+public class LoadingAnimation extends View {
 
 
     private Bitmap mBitmap;
@@ -25,7 +25,7 @@ public class DrawLoadingAnimation extends View {
     private boolean stop;
 
 
-    public DrawLoadingAnimation(final Context mContext, final AttributeSet attrs) {
+    public LoadingAnimation(final Context mContext, final AttributeSet attrs) {
         super(mContext, attrs);
         this.mContext = mContext;
 
@@ -117,6 +117,7 @@ public class DrawLoadingAnimation extends View {
     public void setAlpha(int alpha) {
         this.alpha = alpha;
         mPaint.setAlpha(alpha);
+        invalidate();
     }
 
     public int getReduceAlpha() {
@@ -162,6 +163,7 @@ public class DrawLoadingAnimation extends View {
     public void setColor(int color) {
         this.color = color;
         mPaint.setColor(color);
+        invalidate();
     }
 
 }
