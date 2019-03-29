@@ -20,9 +20,9 @@ public class MainActivity extends AppCompatActivity {
         final LoadingAnimation loadingAnimation = findViewById(R.id.loadingAnimation);
         loadingAnimation.setColor(Color.BLACK);
 
-         final ColorList colorList = new ColorList();
+        final ColorList colorList = new ColorList();
 
-        Button btnChangeColor= findViewById(R.id.btnChangeColor);
+        Button btnChangeColor = findViewById(R.id.btnChangeColor);
         btnChangeColor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

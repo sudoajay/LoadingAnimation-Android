@@ -76,13 +76,13 @@ public class LoadingAnimation extends View {
     }
 
     // handler Thread
-    public void setTiming(final int delayMillis){
+    public void setTiming(final int delayMillis) {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
                 clearCanvas();
             }
-        },delayMillis);
+        }, delayMillis);
 
     }
 
