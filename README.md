@@ -51,5 +51,5 @@ If you want to modify or want some changes in loadingAnimation . So follow below
         loadingAnimation.setReduceOtherRadius(1); // default 1
 ```
 ### LICENCE
-LoadingAnimation by Sudo Ajay v1.0 
+LoadingAnimation by Sudo Ajay v2.1 
 
