@@ -1,6 +1,5 @@
 package com.sudoajay.lodingAnimationExample;
 
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -17,8 +16,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         final LoadingAnimation loadingAnimation = findViewById(R.id.loadingAnimation);
-        loadingAnimation.setColor(Color.BLACK);
+
+        // More properties that's helps you to modify
+        // loadingAnimation.setColor(Color.BLACK); // default Black
+        // loadingAnimation.setAlpha(700); // default 700
+        // loadingAnimation.setReduceAlpha(18); // default 18
+        // loadingAnimation.setAnglePoint(0); // default 0
+        // loadingAnimation.setMainRadius(80);  // default 80
+        // loadingAnimation.setOtherRadius(20); // default 20
+        // loadingAnimation.setReduceOtherRadius(1); // default 1
 
         final ColorList colorList = new ColorList();
 

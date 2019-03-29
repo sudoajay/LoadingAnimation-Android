@@ -117,7 +117,8 @@ public class LoadingAnimation extends View {
     public void setAlpha(int alpha) {
         this.alpha = alpha;
         mPaint.setAlpha(alpha);
-        invalidate();
+
+        if(stop) invalidate();
     }
 
     public int getReduceAlpha() {
@@ -163,7 +164,9 @@ public class LoadingAnimation extends View {
     public void setColor(int color) {
         this.color = color;
         mPaint.setColor(color);
-        invalidate();
+
+        if(stop)invalidate();
+
     }
 
 }
