@@ -1,4 +1,4 @@
-##Example
+## Example
 ![Alt Text](https://github.com/SudoAjay/LoadingAnimation-Android/blob/master/app/src/main/res/drawable/LoadingAnimation.gif)
 
 ### To get a Git project into your build
