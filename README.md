@@ -1,6 +1,6 @@
 ## Example
-![Alt Text](https://github.com/SudoAjay/LoadingAnimation-Android/blob/master/app/src/main/res/drawable/loadinganimation.gif)
-
+![Error](https://github.com/SudoAjay/LoadingAnimation-Android/blob/master/LoadingAnimation-Example/src/main/res/drawable/loadinganimation.gif)
+      
 ### To get a Git project into your build
 
 #### Step 1. Add the JitPack repository to your build file
