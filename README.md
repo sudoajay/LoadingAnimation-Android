@@ -1,6 +1,6 @@
 ## Example
-![Alt Text](https://github.com/SudoAjay/LoadingAnimation-Android/blob/master/app/src/main/res/drawable/LoadingAnimation.gif)
-
+![Error](https://github.com/SudoAjay/LoadingAnimation-Android/blob/master/LoadingAnimation-Example/src/main/res/drawable/loadinganimation.gif)
+      
 ### To get a Git project into your build
 
 #### Step 1. Add the JitPack repository to your build file
@@ -20,7 +20,7 @@ allprojects {
 
 ```Java
 dependencies {
-	 	implementation 'com.github.SudoAjay:LoadingAnimation-Android:v2.1'
+	 	implementation 'com.github.SudoAjay:LoadingAnimation-Android:v3.0'
 
 	}
 ```
@@ -52,5 +52,5 @@ If you want to modify or want some changes in loadingAnimation . So follow below
 	loadingAnimation.setTiming(1000); // 1 sec
 ```
 ### LICENCE
-LoadingAnimation by Sudo Ajay v2.1 
+LoadingAnimation by Sudo Ajay v3.0 
 
