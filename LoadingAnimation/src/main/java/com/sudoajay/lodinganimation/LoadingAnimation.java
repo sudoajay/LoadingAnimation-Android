@@ -1,6 +1,7 @@
 package com.sudoajay.lodinganimation;
 
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -9,6 +10,7 @@ import android.graphics.Path;
 import android.os.Handler;
 import android.util.AttributeSet;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
 
 
 public class LoadingAnimation extends View {
@@ -27,6 +29,7 @@ public class LoadingAnimation extends View {
 
     public LoadingAnimation(final Context mContext, final AttributeSet attrs) {
         super(mContext, attrs);
+        init(mContext, attrs);
         this.mContext = mContext;
 
 
@@ -41,8 +44,43 @@ public class LoadingAnimation extends View {
         stop = false;
     }
 
+    private void init(Context context, AttributeSet attrs) {
+        TypedArray typedArray = context.getTheme().obtainStyledAttributes(attrs, R.styleable.LoadingAnimation, 0, 0);
+        //Reading values from the XML layout
+        try {
+            int n = typedArray.getIndexCount();
+            for (int i = 0; i < n; i++) {
+                int attr = typedArray.getIndex(i);
+                if (attr == R.styleable.LoadingAnimation_la_set_color) {
+                    color = typedArray.getColor(attr, Color.BLACK);
 
-    // override onSizeChanged
+                    //note that you are accessing standart attributes using your attrs identifier
+                } else if (attr == R.styleable.LoadingAnimation_la_set_alpha) {
+                    alpha = typedArray.getInt(attr, 700);
+
+                } else if (attr == R.styleable.LoadingAnimation_la_set_reduce_alpha) {
+                    alpha = typedArray.getInt(attr, 18);
+
+                } else if (attr == R.styleable.LoadingAnimation_la_set_angle_point) {
+                    anglePoint = typedArray.getInt(attr, 0);
+
+                } else if (attr == R.styleable.LoadingAnimation_la_set_main_radius) {
+                    mainRadius = typedArray.getInt(attr, 80);
+
+                } else if (attr == R.styleable.LoadingAnimation_la_set_other_radius) {
+                    otherRadius = typedArray.getInt(attr, 20);
+
+                } else if (attr == R.styleable.LoadingAnimation_la_set_reduce_other_radius) {
+                    reduceOtherRadius = typedArray.getInt(attr, 1);
+
+                }
+
+            }
+        } finally {
+            typedArray.recycle();
+        }
+    }
+        // override onSizeChanged
     @Override
     protected void onSizeChanged(int w, int h, int oldw, int oldh) {
         super.onSizeChanged(w, h, oldw, oldh);

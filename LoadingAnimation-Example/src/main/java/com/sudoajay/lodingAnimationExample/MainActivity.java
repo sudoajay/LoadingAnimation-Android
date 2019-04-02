@@ -19,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
 
         final LoadingAnimation loadingAnimation = findViewById(R.id.loadingAnimation);
 
+        // Optional
+
         // More properties that's helps you to modify
         // loadingAnimation.setColor(Color.BLACK); // default Black
         // loadingAnimation.setAlpha(700); // default 700
@@ -27,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         // loadingAnimation.setMainRadius(80);  // default 80
         // loadingAnimation.setOtherRadius(20); // default 20
         // loadingAnimation.setReduceOtherRadius(1); // default 1
+
 
         final ColorList colorList = new ColorList();
 

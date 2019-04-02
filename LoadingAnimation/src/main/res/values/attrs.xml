@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="LoadingAnimation">
+        <attr name="la_set_color" format="color"/>
+        <attr name="la_set_alpha" format="integer"/>
+        <attr name="la_set_reduce_alpha" format="integer"/>
+        <attr name="la_set_angle_point" format="integer"/>
+        <attr name="la_set_main_radius" format="integer"/>
+        <attr name="la_set_other_radius" format="integer"/>
+        <attr name="la_set_reduce_other_radius" format="integer"/>
+    </declare-styleable>
+
+</resources>
