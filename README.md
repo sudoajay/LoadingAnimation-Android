@@ -37,6 +37,16 @@ dependencies {
 ```
 
 If you want to modify or want some changes in loadingAnimation . So follow below properties to do it.
+### Xml
+```XML
+ 	app:la_set_alpha="700"
+        app:la_set_color="@android:color/black"
+        app:la_set_reduce_alpha="18"
+        app:la_set_angle_point="0"
+        app:la_set_main_radius="80"
+        app:la_set_other_radius="20"
+        app:la_set_reduce_other_radius="1"
+```
 
 ### Java
 
