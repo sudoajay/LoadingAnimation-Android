@@ -59,7 +59,7 @@ public class LoadingAnimation extends View {
                     alpha = typedArray.getInt(attr, 700);
 
                 } else if (attr == R.styleable.LoadingAnimation_la_set_reduce_alpha) {
-                    alpha = typedArray.getInt(attr, 18);
+                    reduceAlpha = typedArray.getInt(attr, 18);
 
                 } else if (attr == R.styleable.LoadingAnimation_la_set_angle_point) {
                     anglePoint = typedArray.getInt(attr, 0);
