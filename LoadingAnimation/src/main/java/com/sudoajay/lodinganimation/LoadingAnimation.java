@@ -24,7 +24,7 @@ public class LoadingAnimation extends View {
     private int anglePoint = 0, alpha = 700, reduceAlpha = 18, mainRadius = 80, otherRadius = 20,
             reduceOtherRadius = 1, color = Color.BLACK;
     private final int gap = 12;
-    private boolean stop, start;
+    private boolean stop=true, start;
 
 
     public LoadingAnimation(final Context mContext, final AttributeSet attrs) {
@@ -108,6 +108,8 @@ public class LoadingAnimation extends View {
 
     // handler Thread
     public void setTiming(final int delayMillis) {
+        stop = false;
+        this.postInvalidateDelayed(100);
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -118,15 +120,17 @@ public class LoadingAnimation extends View {
     }
 
 
-    public void setStop() {
+    public void stop() {
         clearCanvas();
     }
 
 
     @SuppressLint("WrongCall")
-    public void setStart() {
+    public void start() {
+        start= true;
         setUp();
         if (start) {
+            stop = false;
             this.postInvalidateDelayed(100);
         }
     }
@@ -147,7 +151,6 @@ public class LoadingAnimation extends View {
         mPaint.setColor(color);
         mPaint.setStyle(Paint.Style.FILL_AND_STROKE);
 
-        stop = false;
     }
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
