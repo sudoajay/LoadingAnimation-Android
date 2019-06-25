@@ -1,5 +1,6 @@
 package com.sudoajay.lodinganimation;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Bitmap;
@@ -10,7 +11,6 @@ import android.graphics.Path;
 import android.os.Handler;
 import android.util.AttributeSet;
 import android.view.View;
-import android.view.inputmethod.EditorInfo;
 
 
 public class LoadingAnimation extends View {
@@ -24,7 +24,7 @@ public class LoadingAnimation extends View {
     private int anglePoint = 0, alpha = 700, reduceAlpha = 18, mainRadius = 80, otherRadius = 20,
             reduceOtherRadius = 1, color = Color.BLACK;
     private final int gap = 12;
-    private boolean stop;
+    private boolean stop, start;
 
 
     public LoadingAnimation(final Context mContext, final AttributeSet attrs) {
@@ -32,16 +32,8 @@ public class LoadingAnimation extends View {
         init(mContext, attrs);
         this.mContext = mContext;
 
+        setUp();
 
-        // we set a new Path
-        mPath = new Path();
-
-        // and we set a new Paint with the desired attributes
-        mPaint = new Paint();
-        mPaint.setColor(color);
-        mPaint.setStyle(Paint.Style.FILL_AND_STROKE);
-
-        stop = false;
     }
 
     private void init(Context context, AttributeSet attrs) {
@@ -99,6 +91,7 @@ public class LoadingAnimation extends View {
         // draw the mPath with the mPaint on the canvas when onDraw
         canvas.drawPath(mPath, mPaint);
 
+
         if (!stop) {
             for (int i = 0; i < 10; i++) {
                 mPaint.setAlpha(alpha);
@@ -125,6 +118,24 @@ public class LoadingAnimation extends View {
     }
 
 
+    public void setStop(boolean stop) {
+        if (stop) {
+            this.stop = stop;
+            clearCanvas();
+        }
+    }
+
+
+    @SuppressLint("WrongCall")
+    public void setStart(boolean start) {
+        setUp();
+        this.start = start;
+        if (start) {
+            this.postInvalidateDelayed(100);
+            stop = false;
+        }
+    }
+
     // clear The Whole Path
     public void clearCanvas() {
         stop = true;
@@ -132,6 +143,17 @@ public class LoadingAnimation extends View {
         invalidate();
     }
 
+    private void setUp(){
+        // we set a new Path
+        mPath = new Path();
+
+        // and we set a new Paint with the desired attributes
+        mPaint = new Paint();
+        mPaint.setColor(color);
+        mPaint.setStyle(Paint.Style.FILL_AND_STROKE);
+
+        stop = false;
+    }
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         int mWidth = MeasureSpec.getSize(widthMeasureSpec);
