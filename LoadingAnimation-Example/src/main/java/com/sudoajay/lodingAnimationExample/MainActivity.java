@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         final LoadingAnimation loadingAnimation = findViewById(R.id.loadingAnimation);
-//        loadingAnimation.start();
+        loadingAnimation.start();
 //        loadingAnimation.setTiming(500);
         // Optional
 
