@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         final LoadingAnimation loadingAnimation = findViewById(R.id.loadingAnimation);
-        loadingAnimation.setStart(true);
+//        loadingAnimation.setStart();
         // Optional
 
         // More properties that's helps you to modify
@@ -37,7 +37,6 @@ public class MainActivity extends AppCompatActivity {
         btnChangeColor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                loadingAnimation.setStop(true);
                 loadingAnimation.setColor(colorList.getNextColor());
             }
         });

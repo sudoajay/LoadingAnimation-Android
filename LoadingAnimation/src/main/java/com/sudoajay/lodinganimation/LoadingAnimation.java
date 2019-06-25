@@ -118,21 +118,16 @@ public class LoadingAnimation extends View {
     }
 
 
-    public void setStop(boolean stop) {
-        if (stop) {
-            this.stop = stop;
-            clearCanvas();
-        }
+    public void setStop() {
+        clearCanvas();
     }
 
 
     @SuppressLint("WrongCall")
-    public void setStart(boolean start) {
+    public void setStart() {
         setUp();
-        this.start = start;
         if (start) {
             this.postInvalidateDelayed(100);
-            stop = false;
         }
     }
 
