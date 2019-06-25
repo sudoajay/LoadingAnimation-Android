@@ -61,12 +61,9 @@ If you want to modify or want some changes in loadingAnimation . So follow below
         loadingAnimation.setReduceOtherRadius(1); // default 1
 	
 	loadingAnimation.setTiming(1000); 
-```
-##### or you can use
-
-```JAVA
-	loadingAnimation.setStart();
-	loadingAnimation.setStop();
+	      // or
+	loadingAnimation.start();
+	loadingAnimation.stop();
 ```
 
 ### LICENCE
