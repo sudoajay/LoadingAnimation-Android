@@ -65,8 +65,8 @@ If you want to modify or want some changes in loadingAnimation . So follow below
 ##### or you can use
 
 ```JAVA
-	loadingAnimation.start();
-	loadingAnimation.stop();
+	loadingAnimation.setStart();
+	loadingAnimation.setStop();
 ```
 
 ### LICENCE
