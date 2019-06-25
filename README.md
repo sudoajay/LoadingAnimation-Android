@@ -20,7 +20,7 @@ allprojects {
 
 ```Java
 dependencies {
-	 	implementation 'com.github.SudoAjay:LoadingAnimation-Android:v3.1'
+	 	implementation 'com.github.SudoAjay:LoadingAnimation-Android:v3.2'
 
 	}
 ```
@@ -59,8 +59,16 @@ If you want to modify or want some changes in loadingAnimation . So follow below
         loadingAnimation.setMainRadius(80);  // default 80
         loadingAnimation.setOtherRadius(20); // default 20
         loadingAnimation.setReduceOtherRadius(1); // default 1
+	
 	loadingAnimation.setTiming(1000); // 1 sec
 ```
+##### or you can use
+
+```JAVA
+	loadingAnimation.start();
+	loadingAnimation.stop();
+```
+
 ### LICENCE
-LoadingAnimation by Sudo Ajay v3.1 
+LoadingAnimation by Sudo Ajay v3.2 
 
