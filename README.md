@@ -20,7 +20,7 @@ allprojects {
 
 ```Java
 dependencies {
-	 	implementation 'com.github.SudoAjay:LoadingAnimation-Android:v3.4'
+	 	implementation 'com.github.SudoAjay:LoadingAnimation-Android:v3.5'
 
 	}
 ```
@@ -67,5 +67,5 @@ If you want to modify or want some changes in loadingAnimation . So follow below
 ```
 
 ### LICENCE
-LoadingAnimation by Sudo Ajay v3.4 
+LoadingAnimation by Sudo Ajay v3.5 
 
