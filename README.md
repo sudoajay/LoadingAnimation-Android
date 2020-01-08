@@ -20,7 +20,7 @@ allprojects {
 
 ```Java
 dependencies {
-	 	 implementation 'com.github.SudoAjay:LoadingAnimation-Android:v3.6''
+	 	 implementation 'com.github.SudoAjay:LoadingAnimation-Android:v3.6'
 
 	}
 ```
